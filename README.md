@@ -21,13 +21,13 @@ Installation:
 4. load the sketch to the Attiny device
 4. power on the Attiny, the Raspberry Pi and the SH1106 display.
 
-The ACT led should blink in normal operation.
+The ACT led of the Raspberry Pi should blink in normal operation and this sketch exploits it as a sort of watchdog.
 
-If the ACT led remains switched off (shutdown) or on (crash) for more than two minutes, the Attiny device will reboot the Raspberry Pi.
+If the ACT led remains constantly switched off (shutdown) or on (crash) for more than two minutes, the Attiny device will reboot the Raspberry Pi.
 
 If connecting the SH1106 OLED display to the Raspberry, after the boot the Raspberry can clear the screen (or use the display for other things).
 
-Notice that when the Raspberry device is in PINN rescue mode, the device does not reboot (it appears that luckily the rescue OS embedded in the PINN software keeps the ACT led quickly blinking. Anyway, after `echo 1 >/sys/class/leds/led0/brightness` (or `echo 0 >/sys/class/leds/led0/brightness`) the Raspberry device reboots in two minutes.
+Notice that when the Raspberry device is in PINN rescue mode, where the ACT led does not look to blink, luckily the device does not reboot (it appears that the rescue shell embedded in the PINN software keeps the ACT led very quickly blinking). Anyway, after `echo 1 >/sys/class/leds/led0/brightness` (or `echo 0 >/sys/class/leds/led0/brightness`) the Raspberry device reboots in two minutes.
 
 The internal led of the Arduino device is used to monitor the watchdog feature; comment out `#define USE_INTERNAL_LED 1` if the usage of the internal led is not wanted.
 
