@@ -31,7 +31,7 @@ Notice that when the Raspberry device is in PINN rescue mode, the device does no
 
 The internal led of the Arduino device is used to monitor the watchdog feature; comment out `#define USE_INTERNAL_LED 1` if the usage of the internal led is not wanted.
 
-![LED-act](https://user-images.githubusercontent.com/8292987/148591592-8e3d445f-b40c-40a1-9005-0b2cc7c86a17.png)
+![LED-act](https://user-images.githubusercontent.com/8292987/148591811-dcc69ac5-3bb5-4d61-8467-7e907a4eef54.png)
 
 ## Used Libraries:
 - https://github.com/notisrac/SH1106Lib (No buffer SH1106 OLED display driver)
